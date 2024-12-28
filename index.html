@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сайт</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: url('default-background.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #500073; /* Цвет текста */
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            min-height: 100vh;
+            padding: 20px;
+            box-sizing: border-box;
+            align-items: center; /* Центрирование содержимого */
+        }
+
+        header {
+            width: 100%;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .avatar {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 2px solid #ccc;
+            margin-bottom: 20px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        header h1 {
+            font-size: 2em;
+            margin: 0;
+            color: white; /* Белый цвет для текста в заголовке */
+        }
+
+        header p {
+            font-size: 1em;
+            margin: 5px 0;
+            color: #500073; /* Цвет текста для "Будущий QA Инженер" */
+        }
+
+        section {
+            width: 100%;
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .block, .about-me, .personal-info {
+            background: rgba(255, 255, 255, 0.7); /* Уменьшена прозрачность на 30% */
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+            margin-bottom: 15px;
+            color: #500073; /* Цвет текста */
+            width: auto; /* Ширина блока подстраивается под контент */
+            max-width: 600px;
+            text-align: center;
+        }
+
+        .personal-info {
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .about-me h2, .block h2, .personal-info h2 {
+            font-size: 1.5em;
+            margin: 0;
+            color: #500073; /* Цвет заголовков */
+        }
+
+        .block p, .about-me p, .personal-info p {
+            font-size: 0.9em;
+            line-height: 1.4;
+            margin: 8px 0;
+        }
+
+        .block a, .personal-info a {
+            color: #500073; /* Цвет ссылок */
+            text-decoration: none;
+        }
+
+        .block a:hover, .personal-info a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            width: 100%;
+            text-align: center;
+            font-size: 0.8em;
+            color: white; /* Белый цвет текста в футере */
+            background-color: rgba(0, 0, 0, 0.5);
+            position: absolute;
+            bottom: 0;
+            padding: 10px;
+        }
+
+        footer a {
+            color: white; /* Белый цвет ссылки в футере */
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        .contacts {
+            margin-top: 8px;
+        }
+
+        .contacts a {
+            color: #500073; /* Цвет ссылок контактов */
+            text-decoration: none;
+        }
+
+        .contacts a:hover {
+            text-decoration: underline;
+        }
+
+        /* Медиа-запросы для мобильных устройств */
+        @media (max-width: 768px) {
+            .avatar {
+                width: 150px;
+                height: 150px;
+            }
+
+            header h1 {
+                font-size: 1.5em;
+            }
+
+            header p {
+                font-size: 0.9em;
+            }
+
+            .block, .about-me, .personal-info {
+                width: 95%; /* Ширина блоков будет 95% на мобильных */
+                padding: 10px;
+            }
+
+            .block h2, .about-me h2, .personal-info h2 {
+                font-size: 1.2em;
+            }
+
+            .block p, .about-me p, .personal-info p {
+                font-size: 0.8em;
+            }
+        }
+
+        /* Медиа-запросы для очень маленьких экранов (например, телефоны в портретной ориентации) */
+        @media (max-width: 480px) {
+            .avatar {
+                width: 120px;
+                height: 120px;
+            }
+
+            header h1 {
+                font-size: 1.3em;
+            }
+
+            header p {
+                font-size: 0.8em;
+            }
+
+            .block, .about-me, .personal-info {
+                width: 100%; /* Блоки будут занимать 100% ширины на маленьких экранах */
+                padding: 8px;
+            }
+
+            .block h2, .about-me h2, .personal-info h2 {
+                font-size: 1.1em;
+            }
+
+            .block p, .about-me p, .personal-info p {
+                font-size: 0.7em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="avatar">
+            <img src="avatar.png" alt="Ваш аватар">
+        </div>
+        <div class="personal-info">
+            <h2>Вячеслав Меркурьев</h2>
+            <p style="color: #500073;">Будущий QA Инженер</p>
+        </div>
+    </header>
+
+    <section>
+        <div class="about-me">
+            <h2>Обо мне</h2>
+            <p>Я — начинающий QA инженер, увлекаюсь тестированием программного обеспечения. Моя цель — стать экспертом в своей области, чтобы создавать качественные продукты и обеспечивать их надежность. Я учусь новым технологиям и стремлюсь к самосовершенствованию в своей карьере.</p>
+            <p>В свободное время составляю правильную <a href="https://www.ibag.pro/pics/maps/real-map_.jpg" target="_blank">карту земли</a>.</p>
+        </div>
+
+        <div class="block">
+            <h2>Контакты</h2>
+            <p><a href="mailto:wpchicken963@gmail.com">Email</a></p>
+            <p><a href="https://t.me/slmv963" target="_blank">Telegram</a></p>
+            <p><a href="https://discord.gg/5d5urW7y" target="_blank">Discord</a></p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Рассольник 2.0. <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">=Да-да не удивляйтесь=</a></p>
+    </footer>
+</body>
+</html>
+
